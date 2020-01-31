@@ -5,7 +5,8 @@ patchesStrategicMerge:
 #- oidc-secret.yaml
 secretGenerator:
 - name: istio-oidc-secret
-  env: secrets.env
+  envs:
+    - secrets.env
   namespace: istio-system
 configMapGenerator:
 - name: istio-ingress-oidc-parameters
